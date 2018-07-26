@@ -112,6 +112,7 @@ Translations: [English (en)](README.md) · [日本語 (ja)](README.ja.md) · [�
 - [ライセンス](#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9)
 
 <!-- /toc -->
+    ```
 
 
 一般
@@ -123,16 +124,20 @@ DOCTYPEは標準モードを有効にするために必要です。
 
 悪い例:
 
-    <html>
-      ...
-    </html>
+```html
+<html>
+  ...
+</html>
+```
 
 良い例:
 
-    <!DOCTYPE html>
-    <html>
-      ...
-    </html>
+```html
+<!DOCTYPE html>
+<html>
+  ...
+</html>
+```
 
 
 ### 置き換えられるべきまたは旧式のDOCTYPEを使わない
@@ -141,12 +146,16 @@ DOCTYPEは標準モードを有効にするために必要です。
 
 悪い例:
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-      "http://www.w3.org/TR/html4/strict.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+```
 
 良い例:
 
-    <!DOCTYPE html>
+```html
+<!DOCTYPE html>
+```
 
 
 ### XML宣言を使用しない
@@ -155,12 +164,16 @@ DOCTYPEは標準モードを有効にするために必要です。
 
 悪い例:
 
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <!DOCTYPE html>
+```html
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html>
+```
 
 良い例:
 
-    <!DOCTYPE html>
+```html
+<!DOCTYPE html>
+```
 
 
 ### 文字参照はできる限り使わない
@@ -169,11 +182,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <p><small>Copyright &copy; 2014 W3C<sup>&reg;</sup></small></p>
+```html
+<p><small>Copyright &copy; 2014 W3C<sup>&reg;</sup></small></p>
+```
 
 良い例:
 
-    <p><small>Copyright © 2014 W3C<sup>®</sup></small></p>
+```html
+<p><small>Copyright © 2014 W3C<sup>®</sup></small></p>
+```
 
 
 ### `&`と`<`、`>`、`"`、`'`は名前文字参照を使ってエスケープする
@@ -182,11 +199,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <h1>The "&" character</h1>
+```html
+<h1>The "&" character</h1>
+```
 
 良い例:
 
-    <h1>The &quot;&amp;&quot; character</h1>
+```html
+<h1>The &quot;&amp;&quot; character</h1>
+```
 
 
 ### 制御文字や不可視文字は数値文字参照を使う
@@ -195,11 +216,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <p>This book can read in 1 hour.</p>
+```html
+<p>This book can read in 1 hour.</p>
+```
 
 良い例:
 
-    <p>This book can read in 1&#xA0;hour.</p>
+```html
+<p>This book can read in 1&#xA0;hour.</p>
+```
 
 
 ### コメントではその内容の前後へ空白文字を置く
@@ -208,11 +233,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <!--This section is non-normative-->
+```html
+<!--This section is non-normative-->
+```
 
 良い例:
 
-    <!-- This section is non-normative -->
+```html
+<!-- This section is non-normative -->
+```
 
 
 ### 終了タグを省略しない
@@ -221,17 +250,21 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <html>
-      <body>
-        ...
+```html
+<html>
+  <body>
+    ...
+```
 
 良い例:
 
-    <html>
-      <body>
-        ...
-      </body>
-    </html>
+```html
+<html>
+  <body>
+    ...
+  </body>
+</html>
+```
 
 
 ### 空要素の書き方を混ぜない
@@ -240,13 +273,17 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <img alt="HTML Best Practices" src="/img/logo.png">
-    <hr />
+```html
+<img alt="HTML Best Practices" src="/img/logo.png">
+<hr />
+```
 
 良い例:
 
-    <img alt="HTML Best Practices" src="/img/logo.png">
-    <hr>
+```html
+<img alt="HTML Best Practices" src="/img/logo.png">
+<hr>
+```
 
 
 ### タグや属性値の前後へ空白文字を置かない
@@ -255,11 +292,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <h1 class=" title " >HTML Best Practices</h1>
+```html
+<h1 class=" title " >HTML Best Practices</h1>
+```
 
 良い例:
 
-    <h1 class="title">HTML Best Practices</h1>
+```html
+<h1 class="title">HTML Best Practices</h1>
+```
 
 
 ### 大文字・小文字を混ぜない
@@ -268,15 +309,21 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <a HREF="#general">General</A>
+```html
+<a HREF="#general">General</A>
+```
 
 良い例:
 
-    <a href="#general">General</a>
+```html
+<a href="#general">General</a>
+```
 
 同じく良い例:
 
-    <A HREF="#general">General</A>
+```html
+<A HREF="#general">General</A>
+```
 
 
 ### 引用符を混ぜない
@@ -285,11 +332,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <img alt="HTML Best Practices" src='/img/logo.jpg'>
+```html
+<img alt="HTML Best Practices" src='/img/logo.jpg'>
+```
 
 良い例:
 
-    <img alt="HTML Best Practices" src="/img/logo.jpg">
+```html
+<img alt="HTML Best Practices" src="/img/logo.jpg">
+```
 
 
 ### 属性を2文字以上の空白文字で区切らない
@@ -298,11 +349,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <input   name="q"  type="search">
+```html
+<input   name="q"  type="search">
+```
 
 良い例:
 
-    <input name="q" type="search">
+```html
+<input name="q" type="search">
+```
 
 
 ### 真偽値を取る属性の値は省略する
@@ -311,11 +366,15 @@ UTF-8でHTML文書を書くなら、Emojiも含めほとんどあらゆる文字
 
 悪い例:
 
-    <audio autoplay="autoplay" src="/audio/theme.mp3">
+```html
+<audio autoplay="autoplay" src="/audio/theme.mp3">
+```
 
 良い例:
 
-    <audio autoplay src="/audio/theme.mp3">
+```html
+<audio autoplay src="/audio/theme.mp3">
+```
 
 
 ### 名前空間は省略する
@@ -324,15 +383,19 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <svg xmlns="http://www.w3.org/2000/svg">
-      ...
-    </svg>
+```html
+<svg xmlns="http://www.w3.org/2000/svg">
+  ...
+</svg>
+```
 
 良い例:
 
-    <svg>
-      ...
-    </svg>
+```html
+<svg>
+  ...
+</svg>
+```
 
 
 ### XML属性は使わない
@@ -341,11 +404,15 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <span lang="ja" xml:lang="ja">...</span>
+```html
+<span lang="ja" xml:lang="ja">...</span>
+```
 
 良い例:
 
-    <span lang="ja">...</span>
+```html
+<span lang="ja">...</span>
+```
 
 
 ### `data-*`とMicrodata、RDFa Lite用の属性と通常の属性を混ぜない
@@ -354,11 +421,15 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <img alt="HTML Best Practices" data-height="31" data-width="88" itemprop="image" src="/img/logo.png">
+```html
+<img alt="HTML Best Practices" data-height="31" data-width="88" itemprop="image" src="/img/logo.png">
+```
 
 良い例:
 
-    <img alt="HTML Best Practices" src="/img/logo.png" data-width="88" data-height="31" itemprop="image">
+```html
+<img alt="HTML Best Practices" src="/img/logo.png" data-width="88" data-height="31" itemprop="image">
+```
 
 
 ### デフォルトの暗黙的なARIAセマンティックを尊重する
@@ -367,19 +438,23 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <nav role="navigation">
-      ...
-    </nav>
-    
-    <hr role="separator">
+```html
+<nav role="navigation">
+  ...
+</nav>
+
+<hr role="separator">
+```
 
 良い例:
 
-    <nav>
-      ...
-    </nav>
-    
-    <hr>
+```html
+<nav>
+  ...
+</nav>
+
+<hr>
+```
 
 
 文書要素
@@ -391,11 +466,15 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <html>
+```html
+<html>
+```
 
 良い例:
 
-    <html lang="en-US">
+```html
+<html lang="en-US">
+```
 
 
 ### `lang`属性の値はできる限り短くする
@@ -404,11 +483,15 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <html lang="ja-JP">
+```html
+<html lang="ja-JP">
+```
 
 良い例:
 
-    <html lang="ja">
+```html
+<html lang="ja">
+```
 
 
 ### できる限り`data-*`属性は避ける
@@ -417,15 +500,19 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <span data-language="french">chemises</span>
-    ...
-    <strong data-type="warning">Do not wash!</strong>
+```html
+<span data-language="french">chemises</span>
+...
+<strong data-type="warning">Do not wash!</strong>
+```
 
 良い例:
 
-    <span title="French"><span lang="fr-FR">chemises</span></span>
-    ...
-    <strong class="warning">Do not wash!</strong>
+```html
+<span title="French"><span lang="fr-FR">chemises</span></span>
+...
+<strong class="warning">Do not wash!</strong>
+```
 
 
 文書メタデータ
@@ -437,16 +524,20 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <head>
-      <meta charset="UTF-8">
-    </head>
+```html
+<head>
+  <meta charset="UTF-8">
+</head>
+```
 
 良い例:
 
-    <head>
-      <meta charset="UTF-8">
-      <title>HTML Best Practices</title>
-    </head>
+```html
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Best Practices</title>
+</head>
+```
 
 
 ### `base`要素を使わない
@@ -455,20 +546,24 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <head>
-      ...
-      <base href="/blog/">
-      <link href="hello-world" rel="canonical">
-      ...
-    </head>
+```html
+<head>
+  ...
+  <base href="/blog/">
+  <link href="hello-world" rel="canonical">
+  ...
+</head>
+```
 
 良い例:
 
-    <head>
-      ...
-      <link href="/blog/hello-world" rel="canonical">
-      ...
-    </head>
+```html
+<head>
+  ...
+  <link href="/blog/hello-world" rel="canonical">
+  ...
+</head>
+```
 
 
 ### マイナーな参照先リソースのMIMEタイプを指定する
@@ -477,15 +572,19 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <link href="/pdf" rel="alternate">
-    <link href="/feed" rel="alternate">
-    <link href="/css/screen.css" rel="stylesheet">
+```html
+<link href="/pdf" rel="alternate">
+<link href="/feed" rel="alternate">
+<link href="/css/screen.css" rel="stylesheet">
+```
 
 良い例:
 
-    <link href="/pdf" rel="alternate" type="application/pdf">
-    <link href="/feed" rel="alternate" type="application/rss+xml">
-    <link href="/css/screen.css" rel="stylesheet">
+```html
+<link href="/pdf" rel="alternate" type="application/pdf">
+<link href="/feed" rel="alternate" type="application/rss+xml">
+<link href="/css/screen.css" rel="stylesheet">
+```
 
 
 ### `favicon.ico`へリンクしない
@@ -494,24 +593,32 @@ SVGやMathMLはHTMLの文書では直接扱えます。
 
 悪い例:
 
-    <link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+```html
+<link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+```
 
 良い例:
 
-    <!-- Place `favicon.ico` in the root directory. -->
+```html
+<!-- Place `favicon.ico` in the root directory. -->
+```
 
 
 ### `apple-touch-icon`へのリンクを書く
 
 デフォルトでリクエストされるタッチ・アイコンのパスは突然変わりました。
 
-Bad:
+悪い例:
 
-    <!-- Hey Apple! Please download `/apple-touch-icon.png`! -->
+```html
+<!-- Hey Apple! Please download `/apple-touch-icon.png`! -->
+```
 
-Good:
+良い例:
 
-    <link href="/apple-touch-icon.png" rel="apple-touch-icon">
+```html
+<link href="/apple-touch-icon.png" rel="apple-touch-icon">
+```
 
 
 ### 代替スタイルシートへ`title`属性を追加する
@@ -520,13 +627,17 @@ Good:
 
 悪い例:
 
-    <link href="/css/screen.css" rel="stylesheet">
-    <link href="/css/high-contrast.css" rel="alternate stylesheet">
+```html
+<link href="/css/screen.css" rel="stylesheet">
+<link href="/css/high-contrast.css" rel="alternate stylesheet">
+```
 
 良い例:
 
-    <link href="/css/screen.css" rel="stylesheet">
-    <link href="/css/high-contrast.css" rel="alternate stylesheet" title="High contrast">
+```html
+<link href="/css/screen.css" rel="stylesheet">
+<link href="/css/high-contrast.css" rel="alternate stylesheet" title="High contrast">
+```
 
 
 ### URLには`link`要素を使う
@@ -535,17 +646,21 @@ Good:
 
 悪い例:
 
-    <section itemscope itemtype="http://schema.org/BlogPosting">
-      <meta content="https://example.com/blog/hello" itemprop="url">
-      ...
-    </section>
+```html
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <meta content="https://example.com/blog/hello" itemprop="url">
+  ...
+</section>
+```
 
 良い例:
 
-    <section itemscope itemtype="http://schema.org/BlogPosting">
-      <link href="/blog/hello" itemprop="url">
-      ...
-    </section>
+```html
+<section itemscope itemtype="http://schema.org/BlogPosting">
+  <link href="/blog/hello" itemprop="url">
+  ...
+</section>
+```
 
 
 ### 文書の文字エンコーディングを指定する
@@ -554,16 +669,20 @@ Good:
 
 悪い例:
 
-    <head>
-      <title>HTML Best Practices</title>
-    </head>
+```html
+<head>
+  <title>HTML Best Practices</title>
+</head>
+```
 
 良い例:
 
-    <head>
-      <meta charset="UTF-8">
-      <title>HTML Best Practices</title>
-    </head>
+```html
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Best Practices</title>
+</head>
+```
 
 
 ### 置き換えられるべき文字エンコーディング指定フォーマットを使わない
@@ -572,11 +691,15 @@ HTTPヘッダーはサーバー側で指定されるべきで、簡単にして�
 
 悪い例:
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+```html
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+```
 
 良い例:
 
-    <meta charset="UTF-8">
+```html
+<meta charset="UTF-8">
+```
 
 
 ### 最初に文字エンコーディングを指定する
@@ -585,19 +708,23 @@ HTTPヘッダーはサーバー側で指定されるべきで、簡単にして�
 
 悪い例:
 
-    <head>
-      <meta content="width=device-width" name="viewport">
-      <meta charset="UTF-8">
-      ...
-    </head>
+```html
+<head>
+  <meta content="width=device-width" name="viewport">
+  <meta charset="UTF-8">
+  ...
+</head>
+```
 
 良い例:
 
-    <head>
-      <meta charset="UTF-8">
-      <meta content="width=device-width" name="viewport">
-      ...
-    </head>
+```html
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width" name="viewport">
+  ...
+</head>
+```
 
 
 ### UTF-8を使う
@@ -606,11 +733,15 @@ UTF-8ならEmojiを自由に使えます。
 
 悪い例:
 
-    <meta charset="Shift_JIS">
+```html
+<meta charset="Shift_JIS">
+```
 
 良い例:
 
-    <meta charset="UTF-8">
+```html
+<meta charset="UTF-8">
+```
 
 
 ### CSSの`type`属性は省略する
@@ -619,15 +750,19 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <style type="text/css">
-      ...
-    </style>
+```html
+<style type="text/css">
+  ...
+</style>
+```
 
 良い例:
 
-    <style>
-      ...
-    </style>
+```html
+<style>
+  ...
+</style>
+```
 
 
 ### `style`要素の中をコメントアウトしない
@@ -636,17 +771,21 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <style>
-    <!--
-      ...
-      -->
-    </style>
+```html
+<style>
+<!--
+  ...
+  -->
+</style>
+```
 
 良い例:
 
-    <style>
-      ...
-    </style>
+```html
+<style>
+  ...
+</style>
+```
 
 
 ### CSSとJavaScriptのタグを混ぜない
@@ -655,21 +794,27 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <script src="/js/jquery.min.js"></script>
-    <link href="/css/screen.css" rel="stylesheet">
-    <script src="/js/main.js"></script>
+```html
+<script src="/js/jquery.min.js"></script>
+<link href="/css/screen.css" rel="stylesheet">
+<script src="/js/main.js"></script>
+```
 
 良い例:
 
-    <link href="/css/screen.css" rel="stylesheet">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
+```html
+<link href="/css/screen.css" rel="stylesheet">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+```
 
 同じく良い例:
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <link href="/css/screen.css" rel="stylesheet">
+```html
+<script src="/js/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<link href="/css/screen.css" rel="stylesheet">
+```
 
 
 セクション
@@ -681,23 +826,27 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <html>
-      <head>
-        ...
-      </head>
-      ...
-    </html>
+```html
+<html>
+  <head>
+    ...
+  </head>
+  ...
+</html>
+```
 
 良い例:
 
-    <html>
-      <head>
-        ...
-      </head>
-      <body>
-        ...
-      </body>
-    </html>
+```html
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
+</html>
+```
 
 
 ### `hgroup`要素のことは忘れる
@@ -706,15 +855,19 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <hgroup>
-      <h1>HTML Best Practices</h1>
-      <h2>For writing maintainable and scalable HTML documents.</h2>
-    </hgroup>
+```html
+<hgroup>
+  <h1>HTML Best Practices</h1>
+  <h2>For writing maintainable and scalable HTML documents.</h2>
+</hgroup>
+```
 
 良い例:
 
-    <h1>HTML Best Practices</h1>
-    <p>For writing maintainable and scalable HTML documents.</p>
+```html
+<h1>HTML Best Practices</h1>
+<p>For writing maintainable and scalable HTML documents.</p>
+```
 
 
 ### `address`要素は連絡先情報にのみ使う
@@ -723,11 +876,15 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <address>No rights reserved.</address>
+```html
+<address>No rights reserved.</address>
+```
 
 良い例:
 
-    <address>Contact: <a href="https://twitter.com/hail2u_">Kyo Nagashima</a></address>
+```html
+<address>Contact: <a href="https://twitter.com/hail2u_">Kyo Nagashima</a></address>
+```
 
 
 グルーピングコンテンツ
@@ -739,14 +896,18 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <pre>
-    &lt;!DOCTYPE html&gt;
-    </pre>
+```html
+<pre>
+&lt;!DOCTYPE html&gt;
+</pre>
+```
 
 良い例:
 
-    <pre>&lt;!DOCTYPE html&gt;
-    </pre>
+```html
+<pre>&lt;!DOCTYPE html&gt;
+</pre>
+```
 
 
 ### `blockquote`要素内でも適切な要素を使う
@@ -755,13 +916,17 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <blockquote>For writing maintainable and scalable HTML documents.</blockquote>
+```html
+<blockquote>For writing maintainable and scalable HTML documents.</blockquote>
+```
 
 良い例:
 
-    <blockquote>
-      <p>For writing maintainable and scalable HTML documents.</p>
-    </blockquote>
+```html
+<blockquote>
+  <p>For writing maintainable and scalable HTML documents.</p>
+</blockquote>
+```
 
 
 ### `blockquote`要素内に帰属情報を含めない
@@ -770,29 +935,35 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <blockquote>
-      <p>For writing maintainable and scalable HTML documents.</p>
+```html
+<blockquote>
+  <p>For writing maintainable and scalable HTML documents.</p>
 
-      <p>— HTML Best Practices</p>
-    </blockquote>
+  <p>— HTML Best Practices</p>
+</blockquote>
+```
 
 良い例:
 
-    <blockquote>
-      <p>For writing maintainable and scalable HTML documents.</p>
-    </blockquote>
-    
-    <p>— HTML Best Practices</p>
+```html
+<blockquote>
+  <p>For writing maintainable and scalable HTML documents.</p>
+</blockquote>
+
+<p>— HTML Best Practices</p>
+```
 
 同じく良い例:
 
-    <figure>
-      <blockquote>
-        <p>For writing maintainable and scalable HTML documents.</p>
-      </blockquote>
-    
-      <figcaption>— HTML Best Practices</figcaption>
-    </figure>
+```html
+<figure>
+  <blockquote>
+    <p>For writing maintainable and scalable HTML documents.</p>
+  </blockquote>
+
+  <figcaption>— HTML Best Practices</figcaption>
+</figure>
+```
 
 
 ### リスト項目は1行に1つずつ書く
@@ -801,18 +972,22 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <ul>
-      <li>General</li><li>The root Element</li><li>Sections</li>...
-    </ul>
+```html
+<ul>
+  <li>General</li><li>The root Element</li><li>Sections</li>...
+</ul>
+```
 
 良い例:
 
-    <ul>
-      <li>General</li>
-      <li>The root Element</li>
-      <li>Sections</li>
-      ...
-    </ul>
+```html
+<ul>
+  <li>General</li>
+  <li>The root Element</li>
+  <li>Sections</li>
+  ...
+</ul>
+```
 
 
 ### `ol`要素では`type`属性を使う
@@ -821,32 +996,36 @@ HTMLでは、`style`要素における`type`属性の初期値は`text/css`で�
 
 悪い例:
 
-    <head>
-      <style>
-        .toc {
-          list-style-type: upper-roman;
-        }
-      </style>
-    </head>
-    <body>
-      <ol class="toc">
-        <li>General</li>
-        <li>The root Element</li>
-        <li>Sections</li>
-        ...
-      </ol>
-    </body>
+```html
+<head>
+  <style>
+    .toc {
+      list-style-type: upper-roman;
+    }
+  </style>
+</head>
+<body>
+  <ol class="toc">
+    <li>General</li>
+    <li>The root Element</li>
+    <li>Sections</li>
+    ...
+  </ol>
+</body>
+```
 
 良い例:
 
-    <body>
-      <ol type="I">
-        <li>General</li>
-        <li>The root Element</li>
-        <li>Sections</li>
-        ...
-      </ol>
-    </body>
+```html
+<body>
+  <ol type="I">
+    <li>General</li>
+    <li>The root Element</li>
+    <li>Sections</li>
+    ...
+  </ol>
+</body>
+```
 
 
 ### `dl`を会話のために使わない
@@ -855,31 +1034,35 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <dl>
-      <dt>Costello</dt>
-      <dd>Look, you gotta first baseman?</dd>
-      <dt>Abbott</dt>
-      <dd>Certainly.</dd>
-      <dt>Costello</dt>
-      <dd>Who’s playing first?</dd>
-      <dt>Abbott</dt>
-      <dd>That’s right.</dd>
-      <dt>Costello becomes exasperated.</dd>
-      <dt>Costello</dt>
-      <dd>When you pay off the first baseman every month, who gets the money?</dd>
-      <dt>Abbott</dt>
-      <dd>Every dollar of it.</dd>
-    </dl>
+```html
+<dl>
+  <dt>Costello</dt>
+  <dd>Look, you gotta first baseman?</dd>
+  <dt>Abbott</dt>
+  <dd>Certainly.</dd>
+  <dt>Costello</dt>
+  <dd>Who’s playing first?</dd>
+  <dt>Abbott</dt>
+  <dd>That’s right.</dd>
+  <dt>Costello becomes exasperated.</dd>
+  <dt>Costello</dt>
+  <dd>When you pay off the first baseman every month, who gets the money?</dd>
+  <dt>Abbott</dt>
+  <dd>Every dollar of it.</dd>
+</dl>
+```
 
 良い例:
 
-    <p>Costello: Look, you gotta first baseman?</p>
-    <p>Abbott: Certainly.</p>
-    <p>Costello: Who’s playing first?</p>
-    <p>Abbott: That’s right.</p>
-    <p>Costello becomes exasperated.</p>
-    <p>Costello: When you pay off the first baseman every month, who gets the money?</p>
-    <p>Abbott: Every dollar of it.</p>
+```html
+<p>Costello: Look, you gotta first baseman?</p>
+<p>Abbott: Certainly.</p>
+<p>Costello: Who’s playing first?</p>
+<p>Abbott: That’s right.</p>
+<p>Costello becomes exasperated.</p>
+<p>Costello: When you pay off the first baseman every month, who gets the money?</p>
+<p>Abbott: Every dollar of it.</p>
+```
 
 
 ### `figcaption`要素は`figure`要素の最初か最後に置く
@@ -888,19 +1071,23 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <figure>
-      <img alt="Front cover of the “HTML Best Practices” book" src="/img/front-cover.png">
-      <figcaption>“HTML Best Practices” Cover Art</figcaption>
-      <img alt="Back cover of the “HTML Best Practices” book" src="/img/back-cover.png">
-    </figure>
+```html
+<figure>
+  <img alt="Front cover of the “HTML Best Practices” book" src="/img/front-cover.png">
+  <figcaption>“HTML Best Practices” Cover Art</figcaption>
+  <img alt="Back cover of the “HTML Best Practices” book" src="/img/back-cover.png">
+</figure>
+```
 
 良い例:
 
-    <figure>
-      <img alt="Front cover of the “HTML Best Practices” book" src="/img/front-cover.png">
-      <img alt="Back cover of the “HTML Best Practices” book" src="/img/back-cover.png">
-      <figcaption>“HTML Best Practices” Cover Art</figcaption>
-    </figure>
+```html
+<figure>
+  <img alt="Front cover of the “HTML Best Practices” book" src="/img/front-cover.png">
+  <img alt="Back cover of the “HTML Best Practices” book" src="/img/back-cover.png">
+  <figcaption>“HTML Best Practices” Cover Art</figcaption>
+</figure>
+```
 
 
 ### `main`要素を使う
@@ -909,15 +1096,19 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <div id="content">
-      ...
-    </div>
+```html
+<div id="content">
+  ...
+</div>
+```
 
 良い例:
 
-    <main>
-      ...
-    </main>
+```html
+<main>
+  ...
+</main>
+```
 
 
 ### できる限り`div`要素は避ける
@@ -926,15 +1117,19 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <div class="chapter">
-      ...
-    </div>
+```html
+<div class="chapter">
+  ...
+</div>
+```
 
 良い例:
 
-    <section>
-      ...
-    </section>
+```html
+<section>
+  ...
+</section>
+```
 
 
 テキストレベルセマンティックス
@@ -946,17 +1141,21 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <h1><a href="https://whatwg.org/">WHATWG</a></h1>
-    
-    <p><a href="https://whatwg.org/">A community maintaining and evolving HTML since 2004.</a></p>
+```html
+<h1><a href="https://whatwg.org/">WHATWG</a></h1>
+
+<p><a href="https://whatwg.org/">A community maintaining and evolving HTML since 2004.</a></p>
+```
 
 良い例:
 
-    <a href="https://whatwg.org/">
-      <h1>WHATWG</h1>
-    
-      <p>A community maintaining and evolving HTML since 2004.</p>
-    </a>
+```html
+<a href="https://whatwg.org/">
+  <h1>WHATWG</h1>
+
+  <p>A community maintaining and evolving HTML since 2004.</p>
+</a>
+```
 
 
 ### リソースをダウンロードさせる場合は`download`属性を使う
@@ -965,11 +1164,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <a href="/downloads/offline.zip">offline version</a>
+```html
+<a href="/downloads/offline.zip">offline version</a>
+```
 
 良い例:
 
-    <a download href="/downloads/offline.zip">offline version</a>
+```html
+<a download href="/downloads/offline.zip">offline version</a>
+```
 
 
 ### `rel`や`hreflang`、`type`属性を必要ならば使う
@@ -978,11 +1181,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <a href="/ja/pdf">Japanese PDF version</a>
+```html
+<a href="/ja/pdf">Japanese PDF version</a>
+```
 
 良い例:
 
-    <a href="/ja/pdf" hreflang="ja" rel="alternate" type="application/pdf">Japanese PDF version</a>
+```html
+<a href="/ja/pdf" hreflang="ja" rel="alternate" type="application/pdf">Japanese PDF version</a>
+```
 
 
 ### リンク文字列は明確にする
@@ -991,11 +1198,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <p><a href="/pdf" rel="alternate" type="application/pdf">Click here</a> to view PDF version.</p>
+```html
+<p><a href="/pdf" rel="alternate" type="application/pdf">Click here</a> to view PDF version.</p>
+```
 
 良い例:
 
-    <p><a href="/pdf" rel="alternate" type="application/pdf">PDF version</a> is also available.</p>
+```html
+<p><a href="/pdf" rel="alternate" type="application/pdf">PDF version</a> is also available.</p>
+```
 
 
 ### `em`要素を警告や注意に使わない
@@ -1004,11 +1215,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <em>Caution!</em>
+```html
+<em>Caution!</em>
+```
 
 良い例:
 
-    <strong>Caution!</strong>
+```html
+<strong>Caution!</strong>
+```
 
 
 ### できる限り`s`や`i`、`b`、`u`要素を避ける
@@ -1017,11 +1232,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <i class="icon-search"></i>
+```html
+<i class="icon-search"></i>
+```
 
 良い例:
 
-    <span class="icon-search" aria-hidden="true"></span>
+```html
+<span class="icon-search" aria-hidden="true"></span>
+```
 
 
 ### `q`要素内へ引用符は置かない
@@ -1030,16 +1249,21 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <q>“For writing maintainable and scalable HTML documents”</q>
+```html
+<q>“For writing maintainable and scalable HTML documents”</q>
+```
 
 良い例:
 
-    <q>For writing maintainable and scalable HTML documents</q>
+```html
+<q>For writing maintainable and scalable HTML documents</q>
+```
 
 同じく良い例:
 
-    “For writing maintainable and scalable HTML documents”
-
+```html
+“For writing maintainable and scalable HTML documents”
+```
 
 ### `abbr`要素へ`title`属性を追加する
 
@@ -1047,11 +1271,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <abbr>HBP</abbr>
+```html
+<abbr>HBP</abbr>
+```
 
 良い例:
 
-    <abbr title="HTML Best Practices">HBP</abbr>
+```html
+<abbr title="HTML Best Practices">HBP</abbr>
+```
 
 
 ### `ruby`要素は冗長にマークアップする
@@ -1060,11 +1288,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <ruby>HTML<rt>えいちてぃーえむえる</ruby>
+```html
+<ruby>HTML<rt>えいちてぃーえむえる</ruby>
+```
 
 良い例:
 
-    <ruby>HTML<rp> (</rp><rt>えいちてぃーえむえる</rt><rp>) </rp></ruby>
+```html
+<ruby>HTML<rp> (</rp><rt>えいちてぃーえむえる</rt><rp>) </rp></ruby>
+```
 
 
 ### 機械的に解釈可能でない`time`要素では`datetime`属性を追加する
@@ -1073,11 +1305,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <time>Dec 19, 2014</time>
+```html
+<time>Dec 19, 2014</time>
+```
 
 良い例:
 
-    <time datetime="2014-12-19">Dec 19, 2014</time>
+```html
+<time datetime="2014-12-19">Dec 19, 2014</time>
+```
 
 
 ### コードの言語は`class`属性で`language-`で始めることで指定する
@@ -1086,11 +1322,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <code>&lt;!DOCTYPE html&gt;</code>
+```html
+<code>&lt;!DOCTYPE html&gt;</code>
+```
 
 良い例:
 
-    <code class="language-html">&lt;!DOCTYPE html&gt;</code>
+```html
+<code class="language-html">&lt;!DOCTYPE html&gt;</code>
+```
 
 
 ### できる限り`kbd`要素はシンプルにする
@@ -1099,11 +1339,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <kbd><kbd>Ctrl</kbd>+<kbd>F5</kbd></kbd>
+```html
+<kbd><kbd>Ctrl</kbd>+<kbd>F5</kbd></kbd>
+```
 
 良い例:
 
-    <kbd>Ctrl+F5</kbd>
+```html
+<kbd>Ctrl+F5</kbd>
+```
 
 
 ### できる限り`span`要素は使わない
@@ -1112,11 +1356,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    HTML <span class="best">Best</span> Practices
+```html
+HTML <span class="best">Best</span> Practices
+```
 
 良い例:
 
-    HTML <em>Best</em> Practices
+```html
+HTML <em>Best</em> Practices
+```
 
 
 ### `br`要素の後ろでは改行する
@@ -1125,13 +1373,17 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <p>HTML<br>Best<br>Practices</p>
+```html
+<p>HTML<br>Best<br>Practices</p>
+```
 
 良い例:
 
-    <p>HTML<br>
-    Best<br>
-    Practices</p>
+```html
+<p>HTML<br>
+Best<br>
+Practices</p>
+```
 
 
 ### 見た目だけのために`br`要素を使わない
@@ -1140,15 +1392,19 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <p><label>Rule name: <input name="rule-name" type="text"></label><br>
-    <label>Rule description:<br>
-    <textarea name="rule-description"></textarea></label></p>
+```html
+<p><label>Rule name: <input name="rule-name" type="text"></label><br>
+<label>Rule description:<br>
+<textarea name="rule-description"></textarea></label></p>
+```
 
 良い例:
 
-    <p><label>Rule name: <input name="rule-name" type="text"></label></p>
-    <p><label>Rule description:<br>
-    <textarea name="rule-description"></textarea></label></p>
+```html
+<p><label>Rule name: <input name="rule-name" type="text"></label></p>
+<p><label>Rule description:<br>
+<textarea name="rule-description"></textarea></label></p>
+```
 
 
 編集
@@ -1160,15 +1416,19 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <p>For writing maintainable and scalable HTML documents.<del> And for mental stability.</p>
-    
-    <p>Don’t trust!</p></del>
+```html
+<p>For writing maintainable and scalable HTML documents.<del> And for mental stability.</p>
+
+<p>Don’t trust!</p></del>
+```
 
 良い例:
 
-    <p>For writing maintainable and scalable HTML documents.<del> And for mental stability.</del></p>
-    
-    <del><p>Don’t trust!</p></del>
+```html
+<p>For writing maintainable and scalable HTML documents.<del> And for mental stability.</del></p>
+
+<del><p>Don’t trust!</p></del>
+```
 
 
 エンベディッドコンテンツ
@@ -1180,21 +1440,25 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <picture>
-      <source srcset="/img/logo.webp" type="image/webp">
-      <source srcset="/img/logo.hdp" type="image/vnd.ms-photo">
-      <source srcset="/img/logo.jp2" type="image/jp2">
-      <source srcset="/img/logo.jpg" type="image/jpg">
-    </picture>
+```html
+<picture>
+  <source srcset="/img/logo.webp" type="image/webp">
+  <source srcset="/img/logo.hdp" type="image/vnd.ms-photo">
+  <source srcset="/img/logo.jp2" type="image/jp2">
+  <source srcset="/img/logo.jpg" type="image/jpg">
+</picture>
+```
 
 良い例:
 
-    <picture>
-      <source srcset="/img/logo.webp" type="image/webp">
-      <source srcset="/img/logo.hdp" type="image/vnd.ms-photo">
-      <source srcset="/img/logo.jp2" type="image/jp2">
-      <img src="/img/logo.jpg">
-    </picture>
+```html
+<picture>
+  <source srcset="/img/logo.webp" type="image/webp">
+  <source srcset="/img/logo.hdp" type="image/vnd.ms-photo">
+  <source srcset="/img/logo.jp2" type="image/jp2">
+  <img src="/img/logo.jpg">
+</picture>
+```
 
 
 ### 必要な時は`img`要素へ`alt`属性を追加する
@@ -1203,11 +1467,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <img src="/img/logo.png">
+```html
+<img src="/img/logo.png">
+```
 
 良い例:
 
-    <img alt="HTML Best Practices" src="/img/logo.png">
+```html
+<img alt="HTML Best Practices" src="/img/logo.png">
+```
 
 
 ### 可能ならば`alt`属性は空にする
@@ -1216,12 +1484,15 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <img alt="Question mark icon" src="/img/icon/help.png"> Help
+```html
+<img alt="Question mark icon" src="/img/icon/help.png"> Help
+```
 
 良い例:
 
-    <img alt="" src="/img/icon/help.png"> Help
-
+```html
+<img alt="" src="/img/icon/help.png"> Help
+```
 
 ### 可能ならば`alt`属性は省略する
 
@@ -1229,12 +1500,16 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <img alt="CAPTCHA" src="captcha.cgi?id=82174">
+```html
+<img alt="CAPTCHA" src="captcha.cgi?id=82174">
+```
 
 良い例:
 
-    <img src="captcha.cgi?id=82174" title="CAPTCHA">
-    (If you cannot see the image, you can use an <a href="?audio">audio</a> test instead.)
+```html
+<img src="captcha.cgi?id=82174" title="CAPTCHA">
+(If you cannot see the image, you can use an <a href="?audio">audio</a> test instead.)
+```
 
 
 ### `iframe`要素の中は空にする
@@ -1243,13 +1518,17 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <iframe src="/ads/default.html">
-      <p>If your browser support inline frame, ads are displayed here.</p>
-    </iframe>
+```html
+<iframe src="/ads/default.html">
+  <p>If your browser support inline frame, ads are displayed here.</p>
+</iframe>
+```
 
 良い例:
 
-    <iframe src="/ads/default.html"></iframe>
+```html
+<iframe src="/ads/default.html"></iframe>
+```
 
 
 ### `map`要素の中はマークアップする
@@ -1258,27 +1537,31 @@ HTMLでは`dl`要素は関連付けリストに限定されています。
 
 悪い例:
 
-    <map name="toc">
-      <a href="#general">General</a>
-      <area alt="General" coords="0, 0, 40, 40" href="#General"> |
-      <a href="#the_root_element">The root element</a>
-      <area alt="The root element" coords="50, 0, 90, 40" href="#the_root_element"> |
-      <a href="#sections">Sections</a>
-      <area alt="Sections" coords="100, 0, 140, 40" href="#sections">
-    </map>
+```html
+<map name="toc">
+  <a href="#general">General</a>
+  <area alt="General" coords="0, 0, 40, 40" href="#General"> |
+  <a href="#the_root_element">The root element</a>
+  <area alt="The root element" coords="50, 0, 90, 40" href="#the_root_element"> |
+  <a href="#sections">Sections</a>
+  <area alt="Sections" coords="100, 0, 140, 40" href="#sections">
+</map>
+```
 
 良い例:
 
-    <map name="toc">
-      <p>
-        <a href="#general">General</a>
-        <area alt="General" coords="0, 0, 40, 40" href="#General"> |
-        <a href="#the_root_element">The root element</a>
-        <area alt="The root element" coords="50, 0, 90, 40" href="#the_root_element"> |
-        <a href="#sections">Sections</a>
-        <area alt="Sections" coords="100, 0, 140, 40" href="#sections">
-      </p>
-    </map>
+```html
+<map name="toc">
+  <p>
+    <a href="#general">General</a>
+    <area alt="General" coords="0, 0, 40, 40" href="#General"> |
+    <a href="#the_root_element">The root element</a>
+    <area alt="The root element" coords="50, 0, 90, 40" href="#the_root_element"> |
+    <a href="#sections">Sections</a>
+    <area alt="Sections" coords="100, 0, 140, 40" href="#sections">
+  </p>
+</map>
+```
 
 
 ### `audio`や`video`要素にフォールバックのためのコンテンツを提供する
@@ -1287,20 +1570,24 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <video>
-      <source src="/mov/theme.mp4" type="video/mp4">
-      <source src="/mov/theme.ogv" type="video/ogg">
-      ...
-    </video>
+```html
+<video>
+  <source src="/mov/theme.mp4" type="video/mp4">
+  <source src="/mov/theme.ogv" type="video/ogg">
+  ...
+</video>
+```
 
 良い例:
 
-    <video>
-      <source src="/mov/theme.mp4" type="video/mp4">
-      <source src="/mov/theme.ogv" type="video/ogg">
-      ...
-      <iframe src="//www.youtube.com/embed/..." allowfullscreen></iframe>
-    </video>
+```html
+<video>
+  <source src="/mov/theme.mp4" type="video/mp4">
+  <source src="/mov/theme.ogv" type="video/ogg">
+  ...
+  <iframe src="//www.youtube.com/embed/..." allowfullscreen></iframe>
+</video>
+```
 
 
 テーブルデータ
@@ -1312,17 +1599,21 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <tr>
-      <td>General</td><td>The root Element</td><td>Sections</td>
-    </tr>
+```html
+<tr>
+  <td>General</td><td>The root Element</td><td>Sections</td>
+</tr>
+```
 
 良い例:
 
-    <tr>
-      <td>General</td>
-      <td>The root Element</td>
-      <td>Sections</td>
-    </tr>
+```html
+<tr>
+  <td>General</td>
+  <td>The root Element</td>
+  <td>Sections</td>
+</tr>
+```
 
 
 ### 見出しセルには`th`要素を使う
@@ -1331,51 +1622,55 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <table>
-      <thead>
-        <tr>
-          <td><strong>Element</strong></td>
-          <td><strong>Empty</strong></td>
-          <td><strong>Tag omission</strong></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong><code>pre</code></strong></td>
-          <td>No</td>
-          <td>Neither tag is omissible</td>
-        </tr>
-        <tr>
-          <td><strong><code>img</code></strong></td>
-          <td>Yes</td>
-          <td>No end tag</td>
-        </tr>
-      </tbody>
-    </table>
+```html
+<table>
+  <thead>
+    <tr>
+      <td><strong>Element</strong></td>
+      <td><strong>Empty</strong></td>
+      <td><strong>Tag omission</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>pre</code></strong></td>
+      <td>No</td>
+      <td>Neither tag is omissible</td>
+    </tr>
+    <tr>
+      <td><strong><code>img</code></strong></td>
+      <td>Yes</td>
+      <td>No end tag</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 良い例:
 
-    <table>
-      <thead>
-        <tr>
-          <th>Element</th>
-          <th>Empty</th>
-          <th>Tag omission</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th><code>pre</code></th>
-          <td>No</td>
-          <td>Neither tag is omissible</td>
-        </tr>
-        <tr>
-          <th><code>img</code></th>
-          <td>Yes</td>
-          <td>No end tag</td>
-        </tr>
-      </tbody>
-    </table>
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Empty</th>
+      <th>Tag omission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>pre</code></th>
+      <td>No</td>
+      <td>Neither tag is omissible</td>
+    </tr>
+    <tr>
+      <th><code>img</code></th>
+      <td>Yes</td>
+      <td>No end tag</td>
+    </tr>
+  </tbody>
+</table>
+```
 
 
 フォーム
@@ -1387,11 +1682,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <p>Query: <input name="q" type="text"></p>
+```html
+<p>Query: <input name="q" type="text"></p>
+```
 
 良い例:
 
-    <p><label>Query: <input name="q" type="text"></label></p>
+```html
+<p><label>Query: <input name="q" type="text"></label></p>
+```
 
 
 ### 可能ならば`for`属性は省略する
@@ -1400,11 +1699,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <label for="q">Query: </label><input id="q" name="q" type="text">
+```html
+<label for="q">Query: </label><input id="q" name="q" type="text">
+```
 
 良い例:
 
-    <label>Query: <input name="q" type="text"></label>
+```html
+<label>Query: <input name="q" type="text"></label>
+```
 
 
 ### `input`要素では適切な`type`属性を使う
@@ -1413,11 +1716,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <label>Search keyword: <input name="q" type="text"></label>
+```html
+<label>Search keyword: <input name="q" type="text"></label>
+```
 
 良い例:
 
-    <label>Search keyword: <input name="q" type="search"></label>
+```html
+<label>Search keyword: <input name="q" type="search"></label>
+```
 
 
 ### `input type="submit"`には`value`属性を追加する
@@ -1426,11 +1733,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <input type="submit">
+```html
+<input type="submit">
+```
 
 良い例:
 
-    <input type="submit" value="Search">
+```html
+<input type="submit" value="Search">
+```
 
 
 ### `pattern`属性を持つ`input`要素には`title`属性を追加する
@@ -1439,11 +1750,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <input name="security-code" pattern="[0-9]{3}" type="text">
+```html
+<input name="security-code" pattern="[0-9]{3}" type="text">
+```
 
 良い例:
 
-    <input name="security-code" pattern="[0-9]{3}" title="A security code is a number in three figures." type="text">
+```html
+<input name="security-code" pattern="[0-9]{3}" title="A security code is a number in three figures." type="text">
+```
 
 
 ### `placeholder`属性をラベル付けに使わない
@@ -1452,11 +1767,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <input name="email" placeholder="Email" type="text">
+```html
+<input name="email" placeholder="Email" type="text">
+```
 
 良い例:
 
-    <label>Email: <input name="email" placeholder="john.doe@example.com" type="text"></label>
+```html
+<label>Email: <input name="email" placeholder="john.doe@example.com" type="text"></label>
+```
 
 
 ### `option`要素は1行に1つ書く
@@ -1465,17 +1784,21 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <datalist id="toc">
-      <option label="General"><option label="The root element"><option label="Sections">
-    </datalist>
+```html
+<datalist id="toc">
+  <option label="General"><option label="The root element"><option label="Sections">
+</datalist>
+```
 
 良い例:
 
-    <datalist id="toc">
-      <option label="General">
-      <option label="The root element">
-      <option label="Sections">
-    </datalist>
+```html
+<datalist id="toc">
+  <option label="General">
+  <option label="The root element">
+  <option label="Sections">
+</datalist>
+```
 
 
 ### `progress`要素には`max`属性を追加する
@@ -1484,11 +1807,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <progress value="0.5"> 50%</progress>
+```html
+<progress value="0.5"> 50%</progress>
+```
 
 良い例:
 
-    <progress max="100" value="50"> 50%</progress>
+```html
+<progress max="100" value="50"> 50%</progress>
+```
 
 
 ### `meter`要素では`min`及び`max`属性を追加する
@@ -1497,11 +1824,15 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <meter value="0.5"> 512GB used (1024GB total)</meter>
+```html
+<meter value="0.5"> 512GB used (1024GB total)</meter>
+```
 
 良い例:
 
-    <meter min="0" max="1024" value="512"> 512GB used (1024GB total)</meter>
+```html
+<meter min="0" max="1024" value="512"> 512GB used (1024GB total)</meter>
+```
 
 
 ### `legend`要素は`fieldset`要素の最初に置く
@@ -1510,19 +1841,23 @@ HTMLで新しく作られた要素にはフォールバックのためのコン�
 
 悪い例:
 
-    <fieldset>
-      <p><label>Is this section is useful?: <input name="usefulness-general" type="checkbox"></label></p>
-      ...
-      <legend>About "General"</legend>
-    </fieldset>
+```html
+<fieldset>
+  <p><label>Is this section is useful?: <input name="usefulness-general" type="checkbox"></label></p>
+  ...
+  <legend>About "General"</legend>
+</fieldset>
+```
 
 良い例:
 
-    <fieldset>
-      <legend>About "General"</legend>
-      <p><label>Is this section is useful?: <input name="usefulness-general" type="checkbox"></label></p>
-      ...
-    </fieldset>
+```html
+<fieldset>
+  <legend>About "General"</legend>
+  <p><label>Is this section is useful?: <input name="usefulness-general" type="checkbox"></label></p>
+  ...
+</fieldset>
+```
 
 
 スクリプティング
@@ -1534,15 +1869,19 @@ HTMLでは、`script`要素における`type`属性の初期値は`text/javascri
 
 悪い例:
 
-    <script type="text/javascript">
-      ...
-    </script>
+```html
+<script type="text/javascript">
+  ...
+</script>
+```
 
 良い例:
 
-    <script>
-      ...
-    </script>
+```html
+<script>
+  ...
+</script>
+```
 
 
 ### `script`要素の中をコメントアウトしない
@@ -1551,25 +1890,31 @@ HTMLでは、`script`要素における`type`属性の初期値は`text/javascri
 
 悪い例:
 
-    <script>
-    /*<![CDATA[*/
-      ...
-    /*]]>*/
-    </script>
+```html
+<script>
+/*<![CDATA[*/
+  ...
+/*]]>*/
+</script>
+```
 
 同じく悪い例:
 
-    <script>
-    <!--
-      ...
-    // -->
-    </script>
+```html
+<script>
+<!--
+  ...
+// -->
+</script>
+```
 
 良い例:
 
-    <script>
-      ...
-    </script>
+```html
+<script>
+  ...
+</script>
+```
 
 
 ### `script`要素を動的に生成するテクニックを使わない
@@ -1578,16 +1923,20 @@ HTMLでは、`script`要素における`type`属性の初期値は`text/javascri
 
 悪い例:
 
-    <script>
-      var script = document.createElement("script");
-      script.async = true;
-      script.src = "//example.com/widget.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
-    </script>
+```html
+<script>
+  var script = document.createElement("script");
+  script.async = true;
+  script.src = "//example.com/widget.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+</script>
+```
 
 良い例:
 
-    <script async defer src="https://example.com/widget.js"></script>
+```html
+<script async defer src="https://example.com/widget.js"></script>
+```
 
 
 その他
@@ -1599,25 +1948,29 @@ HTMLでは、`script`要素における`type`属性の初期値は`text/javascri
 
 悪い例:
 
-    <html>
-    	<head>
-    	  ...
-    	</head>
-      <body>
-        ...
-      </body>
-    </html>
+```html
+<html>
+    <head>
+      ...
+    </head>
+  <body>
+    ...
+  </body>
+</html>
+```
 
 良い例:
 
-    <html>
-      <head>
-        ...
-      </head>
-      <body>
-        ...
-      </body>
-    </html>
+```html
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
+</html>
+```
 
 
 ### 内部リンクには絶対パスを使う
@@ -1626,15 +1979,19 @@ HTMLでは、`script`要素における`type`属性の初期値は`text/javascri
 
 悪い例:
 
-    <link rel="apple-touch-icon" href="http://you.example.com/apple-touch-icon-precomposed.png">
-    ...
-    <p>You can find more at <a href="//you.example.com/contact.html">contact page</a>.</p>
+```html
+<link rel="apple-touch-icon" href="http://you.example.com/apple-touch-icon-precomposed.png">
+...
+<p>You can find more at <a href="//you.example.com/contact.html">contact page</a>.</p>
+```
 
 良い例:
 
-    <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
-    ...
-    <p>You can find more at <a href="/contact.html">contact page</a>.</p>
+```html
+<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+...
+<p>You can find more at <a href="/contact.html">contact page</a>.</p>
+```
 
 
 ### 外部リソースにはプロトコル相対URLを使わない
@@ -1643,11 +2000,15 @@ HTMLでは、`script`要素における`type`属性の初期値は`text/javascri
 
 悪い例:
 
-    <script src="//example.com/js/library.js">
+```html
+<script src="//example.com/js/library.js">
+```
 
 良い例:
 
-    <script src="https://example.com/js/library.js">
+```html
+<script src="https://example.com/js/library.js">
+```
 
 
 投稿者
